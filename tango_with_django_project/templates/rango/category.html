@@ -2,7 +2,11 @@
 {% load static %}
 
 {% block title_block %}
-    {{ category.name }}
+    {% if category %}
+        {{ category.name }}
+    {% else %}
+        Unknown Category
+    {% endif %}
 {% endblock %}
 
 {% block body_block %}
